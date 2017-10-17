@@ -7,6 +7,6 @@ modules:
         - \Helper\Api
     config:
         PhpBrowser:
-            url: 'http://bugitor.dev'
+            url: 'http://localhost:8080'
         REST:
-            url: 'http://bugitor.dev/v1'
+            url: 'http://localhost:8080/v1'
