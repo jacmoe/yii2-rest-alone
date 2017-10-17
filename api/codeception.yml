@@ -11,5 +11,8 @@ settings:
 modules:
     config:
         Yii2:
-            configFile: 'config/web.php'
+            configFile: 'config/test.php'
             cleanup: false
+    config:
+        PhpBrowser:
+            url: http://localhost:8080
