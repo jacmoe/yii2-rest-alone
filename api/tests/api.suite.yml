@@ -1,0 +1,11 @@
+class_name: ApiTester
+modules:
+    enabled:
+        - REST:
+            url: /v1
+            depends: Yii2
+            part: Json
+        - \Helper\Api
+    config:
+        - Yii2
+            entryUrl: http://bugitor.dev
