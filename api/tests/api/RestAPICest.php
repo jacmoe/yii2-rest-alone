@@ -2,10 +2,13 @@
 
 class RestAPICest
 {
+    private $access_token = 'access-token=100-token';
+
     public function hello_test(ApiTester $I)
     {
         $I->wantTo('Test the hello REST API function');
-        $I->sendGET('/hello');
+        $I->amHttpAuthenticated('admin', 'admin');
+        $I->sendGET('/hello?' . $this->access_token);
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
         $I->seeResponseContains('Hello World');
@@ -14,7 +17,8 @@ class RestAPICest
     public function you_test(ApiTester $I)
     {
         $I->wantTo('Test the hello REST API function with argument');
-        $I->sendGET('/hello/you');
+        $I->amHttpAuthenticated('admin', 'admin');
+        $I->sendGET('/hello/you?' . $this->access_token);
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
         $I->seeResponseContains('Hello you');

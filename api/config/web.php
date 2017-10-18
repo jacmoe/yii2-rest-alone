@@ -68,6 +68,11 @@ return [
         'response'             => [
             'format' => \yii\web\Response::FORMAT_JSON,
         ],
+        'user' => [
+            'identityClass' => 'api\modules\v1\models\User',
+            'enableSession' => false,
+            'loginUrl' => null,
+        ],        
     ],
     'params' => $params,
     'as beforeAction' => [

@@ -29,5 +29,10 @@ return [
             'enableStrictParsing' => true,
             'showScriptName'      => false,
         ],
+        'user' => [
+            'identityClass' => 'api\modules\v1\models\User',
+            'enableSession' => false,
+            'loginUrl' => null,
+        ],        
     ],
 ]; 
